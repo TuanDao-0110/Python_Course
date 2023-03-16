@@ -1,8 +1,9 @@
-# Fix the code
-print('5',end='')
-print(" + ", end='')
-print(8,end='')
-print(" - ",end='')
-print(4,end='')
-print(" = ",end='')
-print(5 + 8 - 4)
+age = 20
+
+if age > 17:
+    print("You are of age.")
+    print("you are out of age")
+
+
+
+ 

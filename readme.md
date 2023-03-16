@@ -1,5 +1,7 @@
 # Python Programming MOOC 2023
 
+https://programming-23.mooc.fi/
+
 ## 1. About this course:
 
 The course start on January 16th 2023. This is the course material page for the Introduction to Programming course (BSCS1001, 5 cr) and the Advanced Course in Programming (BSCS1002, 5 cr) from the Department of Computer Science at the University of Helsinki.
@@ -30,19 +32,29 @@ The course start on January 16th 2023. This is the course material page for the 
 <p>You will know how to deal with numbers in user input</p>
 <p>You will know how to cast values into other fundamental data types</p>
 
-|  | arithmetics |
-|------|----------------|
-| Operator | Purpose|Example|Result|
-| + | Addition |2 + 4	|6|
-| - | Subtraction |10 - 2.5|7.5|
-| *| Multiplication |-2 * 123	|-246|
-| /	| Division (floating point result)	 |9 / 2	|4.5|
-| //	| Division (integer result)		 |9 // 2	|4|
-| %	| Modulo  		 |9 %2	|1|
-|**	| Exponentiation		 |2 **3	|8|
+|          | arithmetics                      |
+| -------- | -------------------------------- | --------- | ------ |
+| Operator | Purpose                          | Example   | Result |
+| +        | Addition                         | 2 + 4     | 6      |
+| -        | Subtraction                      | 10 - 2.5  | 7.5    |
+| \*       | Multiplication                   | -2 \* 123 | -246   |
+| /        | Division (floating point result) | 9 / 2     | 4.5    |
+| //       | Division (integer result)        | 9 // 2    | 4      |
+| %        | Modulo                           | 9 %2      | 1      |
+| \*\*     | Exponentiation                   | 2 \*\*3   | 8      |
 
+5. Conditional statements
 
+<p>You will be able to use a simple conditional statement in programming</p>
+<p>You will know what a Boolean value is</p>
+<p>You will be able to express conditionals with comparison operators</p>
 
-
-
-
+|          | Comparison operators  |
+| -------- | --------------------- | ------- |
+| Operator | Purpose               | Example |
+| ==       | Equal to              | a ===b  |
+| !=       | Not equal to          | a !=b   |
+| >        | Greater than          | a > b   |
+| >=       | Greater than          | a>=b    |
+| <        | Less than             | a < b   |
+| <=       | Less than or equal to | a <=b   |

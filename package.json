@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:1":"cd part1 && python3 test.py"
+    "start:1":"cd part1 && python3 test.py",
+    "start:trail":"python3 test.py"
   },
   "keywords": [],
   "author": "",
