@@ -45,9 +45,23 @@ The course start on January 16th 2023. This is the course material page for the 
 
 5. Conditional statements
 
+```mermaid
+---
+title: conditional statement
+---
+stateDiagram-v2
+   --> [Conditional Expression] --> block : true
+    block --> [execution continues] -->
+    [Conditional Expression] --> [execution continues] :False
+
+```
+
 <p>You will be able to use a simple conditional statement in programming</p>
 <p>You will know what a Boolean value is</p>
 <p>You will be able to express conditionals with comparison operators</p>
+
+
+
 
 |          | Comparison operators  |
 | -------- | --------------------- | ------- |
