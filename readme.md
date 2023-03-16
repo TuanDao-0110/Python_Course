@@ -32,7 +32,7 @@ The course start on January 16th 2023. This is the course material page for the 
 <p>You will know how to deal with numbers in user input</p>
 <p>You will know how to cast values into other fundamental data types</p>
 
-|          | arithmetics                      |
+|          | arithmetics                      |           |        |
 | -------- | -------------------------------- | --------- | ------ |
 | Operator | Purpose                          | Example   | Result |
 | +        | Addition                         | 2 + 4     | 6      |
@@ -50,9 +50,11 @@ The course start on January 16th 2023. This is the course material page for the 
 title: conditional statement
 ---
 stateDiagram-v2
-   --> [Conditional Expression] --> block : true
-    block --> [execution continues] -->
-    [Conditional Expression] --> [execution continues] :False
+    [*] --> Conditional
+    Conditional --> True : condition is true
+    True --> [*] : execution continues
+    Conditional --> False : condition is false
+    False --> [*] : execution continues
 
 ```
 
@@ -60,10 +62,7 @@ stateDiagram-v2
 <p>You will know what a Boolean value is</p>
 <p>You will be able to express conditionals with comparison operators</p>
 
-
-
-
-|          | Comparison operators  |
+|          | Comparison operators  |         |
 | -------- | --------------------- | ------- |
 | Operator | Purpose               | Example |
 | ==       | Equal to              | a ===b  |
