@@ -1,6 +1,9 @@
-age = int(input('How old are you?'))
+number = 5
+print("Countdown!")
+while True:
+    print(number)
+    number = number -1
+    if number == 0:
+        break
 
-if age < 18:
-    print('You are not of age!')
-else:
-    print('You are of age!')
+print("Now!")

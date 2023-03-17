@@ -2,9 +2,6 @@
 
 https://programming-23.mooc.fi/
 
-
-
-
 ## 1. About this course:
 
 The course start on January 16th 2023. This is the course material page for the Introduction to Programming course (BSCS1001, 5 cr) and the Advanced Course in Programming (BSCS1002, 5 cr) from the Department of Computer Science at the University of Helsinki.
@@ -75,6 +72,7 @@ stateDiagram-v2
 | <        | Less than             | a < b   |
 | <=       | Less than or equal to | a <=b   |
 
+<br/>
 ### Part 2:
 
 <h2>2.1 Programming terminology</h2>
@@ -87,7 +85,7 @@ stateDiagram-v2
 | 2 + 4 + 3    | 9       | integer               | int              |
 | "abc" + "de" | "abcde" | string                | str              |
 | 11/2         | 5.5     | floating point number | float            |
-| 2 * 5 > 9   | True    | boolean value         | bool             |
+| 2 \* 5 > 9   | True    | boolean value         | bool             |
 
 <p>You will know the difference between a statement and an expression</p>
 <p>You will be able to find out the data type of an evaluated expression</p>
@@ -99,7 +97,6 @@ stateDiagram-v2
 <p>You will understand the purpose of if, elif and else statements within a conditional statement</p>
 <p>You will be able to use the modulo operation % in Boolean expressions</p>
 
-
 ```mermaid
 ---
 title: Conditional Expression
@@ -107,9 +104,9 @@ title: Conditional Expression
 stateDiagram-v2
     [*] --> Conditional_expression
     Conditional_expression --> Block_1 : true
-    Block_1 --> execution_continues 
+    Block_1 --> execution_continues
     Conditional_expression --> Block_2 : false
-    Block_2 --> execution_continues 
+    Block_2 --> execution_continues
     execution_continues --> [*]
 ```
 
@@ -130,5 +127,32 @@ stateDiagram-v2
     block_3 --> execution_continues
     execution_continues --> [*]
 ```
+
+<h2>2.3 Combining conditions</h2>
+
+<p>You will know how to use the operators and, or and not in conditions</p>
+<p>You will be able to write nested conditionals</p>
+
+| Behaviour |       |         |        |
+| --------- | ----- | ------- | ------ |
+| a         | b     | a and b | a or b |
+| False     | False | False   | False  |
+| True      | False | False   | True   |
+| False     | True  | False   | True   |
+| True      | True  | True    | True   |
+
+| Operator 'not' negates a condition |       |
+| ---------------------------------- | ----- |
+| a                                  | not a |
+| True                               | False |
+| False                              | True  |
+
+
+
+<h2>2.4 Simple Loops</h2>
+
+<p>You will know what a loop means in programming</p>
+<p>You will be able to use a while True loop in your programs</p>
+<p>You will know how to use the break command to break out of a loop</p>
 
 
