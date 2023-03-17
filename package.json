@@ -2,7 +2,7 @@
   "name": "python",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "test.py",
   "scripts": {
     "start:1":"cd part1 && python3 test.py",
     "start:trail":"python3 test.py"

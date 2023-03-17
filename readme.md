@@ -2,6 +2,9 @@
 
 https://programming-23.mooc.fi/
 
+
+
+
 ## 1. About this course:
 
 The course start on January 16th 2023. This is the course material page for the Introduction to Programming course (BSCS1001, 5 cr) and the Advanced Course in Programming (BSCS1002, 5 cr) from the Department of Computer Science at the University of Helsinki.
@@ -10,24 +13,24 @@ The course start on January 16th 2023. This is the course material page for the 
 
 ### Part 1:
 
-1. [x] Getting started
+<h2>1.1.Getting started</h2>
 
 <p>You will have written and executed your first Python program</p>
 <p>You will know how to use the print command</p>
 <p>You will be able to use programming for arithmetic operations</p>
 
-2. [x] Information from the user
+<h2>1.2.Information from the user</h2>
 
 <p>You will know how to write a program which uses input from the user</p>
 <p>You will know how to use variables to store input and print it out</p>
 <p>You will be able to combine strings</p>
 
-3. [x] More about variables:
+<h2>1.3.More about variables:</h2>
 <p>You will be able to use variables in different contexts</p>
 <p>You will know what kind of data can be stored in variables</p>
 <p>You will understand the difference between strings, integers and floating point numbers</p>
 
-4. [x] Arithmetic operations
+<h2>1.4.Arithmetic operations</h2>
 <p>You will be able to use variables in various arithmetic operations</p>
 <p>You will know how to deal with numbers in user input</p>
 <p>You will know how to cast values into other fundamental data types</p>
@@ -43,7 +46,7 @@ The course start on January 16th 2023. This is the course material page for the 
 | %        | Modulo                           | 9 %2      | 1      |
 | \*\*     | Exponentiation                   | 2 \*\*3   | 8      |
 
-5. Conditional statements
+<h2>1.5. Conditional statements</h2>
 
 ```mermaid
 ---
@@ -71,3 +74,41 @@ stateDiagram-v2
 | >=       | Greater than          | a>=b    |
 | <        | Less than             | a < b   |
 | <=       | Less than or equal to | a <=b   |
+
+### Part 2:
+
+<h2>2.1 Programming terminology</h2>
+<p> You will be familiar with some essential terminology in programming</p>
+<h3> Expression example:
+
+| Expression   |         |                       |                  |
+| ------------ | ------- | --------------------- | ---------------- |
+| Expression   | Value   | Type                  | Python data type |
+| 2 + 4 + 3    | 9       | integer               | int              |
+| "abc" + "de" | "abcde" | string                | str              |
+| 11/2         | 5.5     | floating point number | float            |
+| 2 * 5 > 9   | True    | boolean value         | bool             |
+
+<p>You will know the difference between a statement and an expression</p>
+<p>You will be able to find out the data type of an evaluated expression</p>
+<p>You will have learnt to use debugging methods to find mistakes in your code</p>
+
+<h2>2.2 More conditionals</h2>
+
+<p>You will know how to create multiple branches within conditional statements</p>
+<p>You will understand the purpose of if, elif and else statements within a conditional statement</p>
+<p>You will be able to use the modulo operation % in Boolean expressions</p>
+
+
+```mermaid
+---
+title: conditional Expression
+---
+stateDiagram-v2
+    [*] --> Conditional
+    Conditional --> Block 1 : True
+    Conditional --> Block 2 : False
+    Block 1 --> execution 
+    Block 2 --> execution
+    execution --> [*]
+```
