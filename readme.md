@@ -102,13 +102,13 @@ stateDiagram-v2
 
 ```mermaid
 ---
-title: conditional Expression
+title: Conditional Expression
 ---
 stateDiagram-v2
-    [*] --> Conditional
-    Conditional --> Block 1 : True
-    Conditional --> Block 2 : False
-    Block 1 --> execution 
-    Block 2 --> execution
-    execution --> [*]
+    [*] --> Conditional_expression
+    Conditional_expression --> Block_1 : true
+    Block_1 --> execution_continues 
+    Conditional_expression --> Block_2 : false
+    Block_2 --> execution_continues 
+    execution_continues --> [*]
 ```
