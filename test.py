@@ -1,7 +1,6 @@
-from math import floor
+age = int(input('How old are you?'))
 
-number = float(input('Please type in a number:'))
-interger = floor(number)
-decimal =float( number- interger)
-print(f'Integer part: {interger}')
-print(f'Decimal part: {decimal}')
+if age < 18:
+    print('You are not of age!')
+else:
+    print('You are of age!')

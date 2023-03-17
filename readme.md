@@ -112,3 +112,23 @@ stateDiagram-v2
     Block_2 --> execution_continues 
     execution_continues --> [*]
 ```
+
+<!-- Alternative branches using the elif statement -->
+
+```mermaid
+---
+title: Alternative branches using the elif statement
+---
+stateDiagram-v2
+    conditional_expression --> block_1 :true
+    block_1 --> execution_continues
+
+    conditional_expression --> conditional_expression_2 :false
+    conditional_expression_2 --> block_2 :true
+    block_2 --> execution_continues
+    conditional_expression_2 --> block_3 :false
+    block_3 --> execution_continues
+    execution_continues --> [*]
+```
+
+
