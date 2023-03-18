@@ -147,12 +147,46 @@ stateDiagram-v2
 | True                               | False |
 | False                              | True  |
 
-
-
 <h2>2.4 Simple Loops</h2>
 
 <p>You will know what a loop means in programming</p>
 <p>You will be able to use a while True loop in your programs</p>
 <p>You will know how to use the break command to break out of a loop</p>
 
+<br/>
 
+### Part 3:
+
+<h2> 3.1 Loops with condition </h2>
+<p>You will know how to create a while loop with a condition</p>
+<p>You will know what roles initialisation, formulating a condition and updating variables perform in a loop</p>
+<p>You will be able to create loops with different kinds of conditions</p>
+
+```mermaid
+---
+title: Loops with conditions
+---
+stateDiagram-v2
+    [*] --> conditional_expression
+    conditional_expression --> block :true
+    block --> conditional_expression
+    conditional_expression --> execution continues :False
+    execution continues --> [*]
+```
+
+<h2> 3.2 Working with strings</h2>
+<p>
+You will be able to use the operators + and * with strings
+</p>
+<p>
+You will know how to find out the length of a string
+</p>
+<p>
+You will know what is meant by string indexing
+</p>
+<p>
+You will know how to look for substrings within a string
+</p>
+
+<h2> 3.3 More loops</h2>
+<h2> 3.4 Defining functions</h2>
