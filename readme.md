@@ -8,8 +8,7 @@ The course start on January 16th 2023. This is the course material page for the 
 
 ## 2. content vs learing objects:
 
-### Part 1:
-
+<h1> Part 1:</h1>
 <h2>1.1.Getting started</h2>
 
 <p>You will have written and executed your first Python program</p>
@@ -73,8 +72,7 @@ stateDiagram-v2
 | <=       | Less than or equal to | a <=b   |
 
 <br/>
-### Part 2:
-
+<h1> Part 2:</h1>
 <h2>2.1 Programming terminology</h2>
 <p> You will be familiar with some essential terminology in programming</p>
 <h3> Expression example:
@@ -155,8 +153,7 @@ stateDiagram-v2
 
 <br/>
 
-### Part 3:
-
+<h1> Part 3:</h1>
 <h2> 3.1 Loops with condition </h2>
 <p>You will know how to create a while loop with a condition</p>
 <p>You will know what roles initialisation, formulating a condition and updating variables perform in a loop</p>
@@ -170,8 +167,8 @@ stateDiagram-v2
     [*] --> conditional_expression
     conditional_expression --> block :true
     block --> conditional_expression
-    conditional_expression --> execution continues :False
-    execution continues --> [*]
+    conditional_expression --> execution_continues :False
+    execution_continues --> [*]
 ```
 
 <h2> 3.2 Working with strings</h2>
@@ -188,4 +185,70 @@ stateDiagram-v2
 <p>You will be able to use the continue command to move to the next iteration</p>
 <p>You will understand how nested loops work</p>
 
+```mermaid
+---
+title: The continue command with break
+---
+stateDiagram-v2
+    [*] --> conditional_expression
+    conditional_expression --> break :true
+    conditional_expression --> execution_continues :false
+    break --> execution_continues
+    execution_continues --> [*]
+```
+
+```mermaid
+---
+title: The continue command continue
+---
+stateDiagram-v2
+    [*] --> conditional_expression
+    conditional_expression --> continue :true
+    continue --> conditional_expression
+    conditional_expression --> execution_continues :false
+    execution_continues --> [*]
+```
+
 <h2> 3.4 Defining functions</h2>
+
+<p>You will know how to write and call your own functions</p>
+<p>You will understand what is meant by the argument and the parameter of a function</p>
+<p>You will be able to define parameters in your own functions</p>
+
+<h1> Part 4 </h1>
+
+<h2>The Visual Studio Code editor, Python interpreter and built-in debugging tool </h2>
+
+<p>You will be equipped to use the Visual Studio Code editor to complete exercises on this course
+<a href='https://programming-23.mooc.fi/part-4/1-vscode'>reference link</a>
+</p>
+<p>You will be familiar with the interactive Python interpreter, and will be able to use it to run code</p>
+
+<h2>More functions</h2>
+<p>You will know more about the arguments and parameters of functions</p>
+<p>You will know how to return values from functions, and how to use the values in your code</p>
+<p>You will be able to add type hints for parameters and return values</p>
+
+<h2>Lists</h2>
+<p>You will know what lists are in Python</p>
+<p>You will be able access a specified item within a list</p>
+<p>You will know how to add items to a list, and how to remove them</p>
+<p>You will be familiar with built-in list functions and methods</p>
+
+<h2>Definite iteration</h2>
+<p>You will know the difference between definite and indefinite iteration</p>
+<p>You will know how a Python for loop works</p>
+<p>You will be able to use a for loop to iterate through lists and strings</p>
+
+```mermaid
+---
+title: The 'for loop'
+---
+stateDiagram-v2
+    [*] --> [are there more items in the list]
+    [are there more items in the list] --> [Select the next item and store it in the variable] :true
+    [Select the next item and store it in the variable] --> [Execute code block]
+    [Execute code block] --> [are there more items in the list]
+    [are there more items in the list] --> [Execution continues] : false
+    [Execution continues] --> [*]
+```
