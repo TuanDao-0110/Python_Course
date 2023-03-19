@@ -241,14 +241,12 @@ stateDiagram-v2
 <p>You will be able to use a for loop to iterate through lists and strings</p>
 
 ```mermaid
----
-title: The 'for loop'
----
-stateDiagram-v2
-    [*] --> id1(are there more items in the list)
-    id1(are there more items in the list) --> id2(Select the next item and store it in the variable) :true
-    id2(Select the next item and store it in the variable) --> id3(Execute code block)
-    id3(Execute code block) --> id1(are there more items in the list)
-    id1(are there more items in the list) --> id3(Execution continues) : false
-    id3(Execution continues) --> [*]
+flowchart TD
+    A[Start] -->  id1(are there more items in the list) 
+    style id1 fill:red,stroke:#333,stroke-width:4px
+    id1(are there more items in the list) --> |True| id2(Select the next item and store it in the variable)
+    id3(Execute code block) --> id1
+    id2 --> id3
+    id1 -->|False| id4(Execution continues)
+    id4 --> B[End]
 ```
