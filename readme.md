@@ -175,18 +175,17 @@ stateDiagram-v2
 ```
 
 <h2> 3.2 Working with strings</h2>
-<p>
-You will be able to use the operators + and * with strings
-</p>
-<p>
-You will know how to find out the length of a string
-</p>
-<p>
-You will know what is meant by string indexing
-</p>
-<p>
-You will know how to look for substrings within a string
-</p>
+<p>You will be able to use the operators + and * with strings</p>
+<p>You will know how to find out the length of a string</p>
+<p>You will know what is meant by string indexing</p>
+<p>You will know how to look for substrings within a string</p>
+<h3>Index string</h3>
+<img src='./assets/view1.png' />
 
 <h2> 3.3 More loops</h2>
+
+<p>You will understand when the break command is needed to break out of loops</p>
+<p>You will be able to use the continue command to move to the next iteration</p>
+<p>You will understand how nested loops work</p>
+
 <h2> 3.4 Defining functions</h2>

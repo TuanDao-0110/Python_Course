@@ -85,7 +85,8 @@ print(words)
 
 # 9. The sum of consecutive numbers, version 2
 
-# Please write a new version of the program in the previous exercise. In addition to the result it should also print out the calculation performed:
+# Please write a new version of the program in the previous exercise. 
+# In addition to the result it should also print out the calculation performed:
 
 # Sample output
 # Limit: 2
@@ -101,4 +102,12 @@ while sum  < limit:
     if(sum < limit):
         words += f' + {start}'
 print(f'The consecutive sum: {words} = {sum}')
+
+
+
+
+
+
+
+
 
