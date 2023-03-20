@@ -242,7 +242,7 @@ stateDiagram-v2
 
 ```mermaid
 flowchart TD
-    A[Start] -->  id1(are there more items in the list) 
+    A[Start] -->  id1(are there more items in the list ?) 
     style id1 fill:red,stroke:#333,stroke-width:4px
     id1(are there more items in the list) --> |True| id2(Select the next item and store it in the variable)
     id3(Execute code block) --> id1
