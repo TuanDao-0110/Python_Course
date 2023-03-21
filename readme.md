@@ -279,3 +279,9 @@ flowchart TD
 <p>You will understand that there can be multiple references to the same object</p>
 <p>You will be able to use lists as parameters in functions</p>
 <p>You will know what is meant by a side effect of a function</p>
+
+<h2>Dictionary</h2>
+<p>You will be familiar with the dictionary data structure</p>
+<p>You will be able to use a dictionary with different types of keys and values</p>
+<p>You will know how to traverse through the contents of a dictionary</p>
+<p>You will be able to name some typical use cases for dictionaries</p>
