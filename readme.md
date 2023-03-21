@@ -214,6 +214,7 @@ stateDiagram-v2
 <p>You will know how to write and call your own functions</p>
 <p>You will understand what is meant by the argument and the parameter of a function</p>
 <p>You will be able to define parameters in your own functions</p>
+<br/>
 
 <h1> Part 4 </h1>
 
@@ -250,3 +251,31 @@ flowchart TD
     id1 -->|False| id4(Execution continues)
     id4 --> B[End]
 ```
+
+<h2>Print statement formatting</h2>
+<p>You will know how to use arguments to format the result of the print command</p>
+<p>You will be able to use f-strings to format printouts</p>
+
+
+<h2>More strings and lists</h2>
+
+<p>You will be familiar with more methods for slicing strings and lists</p>
+<p>You will understand what immutability of strings means</p>
+<p>You will be able to use the methods count and replace</p>
+
+
+<br/>
+<h1>Part 5:</h1>
+<h2>More lists</h2>
+<p>You will be able to create lists with different types of items</p>
+<p>You will know how to use lists to organise data</p>
+<p>You will be able to store a matrix as a two-dimensional list</p>
+
+<a href='https://pythontutor.com/visualize.html#mode=edit'>Visualize tutor link</a>
+
+
+<h2>References</h2>
+<p>You will know what is meant by a reference to a variable</p>
+<p>You will understand that there can be multiple references to the same object</p>
+<p>You will be able to use lists as parameters in functions</p>
+<p>You will know what is meant by a side effect of a function</p>

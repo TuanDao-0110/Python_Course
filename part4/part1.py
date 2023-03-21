@@ -21,12 +21,31 @@ sum(2, 3)
 
 # 2. A triangle
 
-def triangle (times):
-    for i in range(times):
-        print('*' * i)
+
+def line(length, char):
+    if not char:
+        char = "*"
+    print(char[0] * length)
+
+
+def triangle(size):
+    for i in range(1, size+1):
+        line(i, "#")
 
 
 triangle(6)
+
+# Sample output
+#
+##
+###
+####
+#####
+######
+
+#
+##
+###
 
 # 3. A shape
 
@@ -50,6 +69,17 @@ def spruce(time):
         count += 2
         print(' ' * (time - i + 1), '*' * (count))
     print(' ' * (time + 1), '*')
+
+# or
+def spruce(size):
+    print("a spruce!")
+
+    # Draw tree
+    for i in range(1, size + 1):
+        print(" " * (size - i) + "*" * (2 * i - 1))
+
+    # Draw trunk
+    print(" " * (size - 1) + "*")
 
 
 spruce(5)
