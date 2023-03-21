@@ -285,3 +285,10 @@ flowchart TD
 <p>You will be able to use a dictionary with different types of keys and values</p>
 <p>You will know how to traverse through the contents of a dictionary</p>
 <p>You will be able to name some typical use cases for dictionaries</p>
+
+
+<h2>Tuple</h2>
+<p>You will be familiar with the tuple data type</p>
+<p>You will be able to create tuples from various types of values</p>
+<p>You will know the difference between a tuple and a list</p>
+<p>You will be able to name some typical use cases for tuples</p>
