@@ -292,3 +292,14 @@ flowchart TD
 <p>You will be able to create tuples from various types of values</p>
 <p>You will know the difference between a tuple and a list</p>
 <p>You will be able to name some typical use cases for tuples</p>
+
+
+<br/>
+
+<h1>Part 6</h1>
+
+<h2>Reading files</h2>
+<p>You will know how to read the contents of files with Python</p>
+<p>You will know what a text file and a CSV file are</p>
+<p>You will be able to process the contents of a CSV file in your programs</p>
+
