@@ -334,3 +334,162 @@ show_information()
 # 5.1 Spell checker
 
 
+# Please write a program which asks the user to type in some text. 
+# Your program should then perform a spell check, and print out feedback to the user,
+# so that all misspelled words have stars around them. 
+# Please see the two examples below:
+
+# Sample output
+# Write text: We use ptython to make a spell checker
+
+# We use *ptython* to make a spell checker
+# Sample output
+# Write text: This is acually a good and usefull program
+
+# This is *acually* good and *usefull* program
+# The case of the letters should be irrelevant to the functioning of your program.
+
+# The exercise template includes the file wordlist.txt, 
+# which contains all the words the spell checker should accept as correct.
+
+# NB: this exercise doesn't ask you to write any functions,
+# so you should not place any code within an if __name__ == "__main__" block.
+
+# NB2 If Visual Studio can't find the file and you have checked that there are no spelling errors,
+# take a look at these instructions
+
+
+def check_letter (letter):
+    value = False
+    with open('./part6/wordlist.txt','r') as new_file:
+        for line in new_file:
+            parts = line.strip()
+            if parts.capitalize() == letter.capitalize():
+                value = True
+    return value
+
+
+def spell_checker ():
+    text = input('Write text:').rstrip('\n')
+    list = text.split(' ')
+    for word in list:
+        if check_letter(word)==True:
+            print(word, end=" ")
+        else:
+            print(f"*{word}*", end=" ")
+
+
+spell_checker()
+
+
+
+# 6.1 Receip search:
+# NB: Some exercises have multiple parts, and you can receive points for the different parts separately.
+# You can submit a partially completed exercise by choosing 'Submit Solution' from the menu next to the button for executing tests .
+
+# This exercise is about creating a program which allows the user to search for recipes based on their names, 
+# preparation times, or ingredients used.
+# The program should read the recipes from a file submitted by the user.
+
+# Each recipe consists of three or more lines. The first line has the name of the recipe,
+# the second line contains an integer number representing the preparation time in minutes, 
+# and the remaining line or lines contain the ingredients used, one on each line.
+# The recipe ends with an empty line,
+# with the exception of the final recipe in the file which just ends with the end of the file. 
+# So, there can be more than one recipe in a single file, like in the example below.
+
+# Pancakes
+# 15
+# milk
+# eggs
+# flour
+# sugar
+# salt
+# butter
+
+# Meatballs
+# 45
+# mince
+# eggs
+# breadcrumbs
+
+# Tofu rolls
+# 30
+# tofu
+# rice
+# water
+# carrot
+# cucumber
+# avocado
+# wasabi
+
+# Cake pops
+# 60
+# milk
+# bicarbonate
+# eggs
+# salt
+# sugar
+# cardamom
+# butter
+def render_recipes (filename:str):
+    recipes={}
+    temp_list =[]
+    with open('./part6/'+filename) as new_file:
+        for data in new_file:
+            line = data.strip()
+            temp_list.append(line)
+    for i in temp_list:
+        if i == '':
+            continue  
+        if len(i)>0:
+            if i[0].isupper():
+                temp=i
+                recipes[temp]=[]
+            else:
+                recipes[temp].append(i)
+    return recipes
+                
+def search_by_name (filename:str,word:str):
+    recipes=render_recipes(filename)
+    list = []
+    for i in recipes.items():
+        if word.upper() in i[0].upper():
+            list.append(i[0])
+    return list
+
+def search_by_time(filename:str,prep_time:int):
+    smallest =prep_time
+    time =0
+    cake_name=''
+    recipes=render_recipes(filename)
+    list=[]
+    for recipe in recipes.items():
+        if int(recipe[1][0]) < prep_time:
+            temp = prep_time - int(recipe[1][0])
+            if temp < smallest :
+                smallest = temp
+                time = recipe[1][0]
+            cake_name = recipe[0]
+    list.append(f'{cake_name}, preparation time {time} min')
+    print(list)
+    return list
+
+
+def search_by_ingredient(filename:str,ingredient: str):
+    time = ''
+    recipe_name=''
+    recipes=render_recipes(filename)
+    list =[]
+    for i in recipes.items():
+        if ingredient in i[1]:
+            time = i[1][0]
+            recipe_name = i[0]
+            list.append(f'{recipe_name}, preparation time {time} min')
+    return list
+
+
+found_recipes =search_by_time("recipes1.txt", 35)
+
+for recipe in found_recipes:
+    print(recipe)
