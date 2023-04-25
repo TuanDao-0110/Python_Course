@@ -508,7 +508,8 @@ def search_by_ingredient(filename:str,ingredient: str):
 
 
 # Distance between stations
-# First, write a function named get_station_data(filename: str). This function should read the names and locations of all the stations in the file, and return them in a dictionary with the following format:
+# First, write a function named get_station_data(filename: str). This function should read the names 
+# and locations of all the stations in the file, and return them in a dictionary with the following format:
 
 # Sample output
 # {
@@ -516,11 +517,14 @@ def search_by_ingredient(filename:str,ingredient: str):
 #   "Laivasillankatu: (24.956347471358754, 60.160959093887129),
 #   "Kapteeninpuistikko: (24.944927399779715, 60.158189199971673)
 # }
-# Dictionary keys are the names of the stations, and the value attached is a tuple containing the location coordinates of the station. The first element in the tuple is the Longitude field, and the second is the Latitude field.
+# Dictionary keys are the names of the stations, and the value attached is a tuple containing the location coordinates of the station.
+# The first element in the tuple is the Longitude field, and the second is the Latitude field.
 
-# Next, write a function named distance(stations: dict, station1: str, station2: str), which returns the distance between the two stations given as arguments.
+# Next, write a function named distance(stations: dict, station1: str, station2: str),
+# which returns the distance between the two stations given as arguments.
 
-# The distance is calculated using the Pythagorean theorem. The multiplication factors below are approximate values for converting latitudes and longitudes to distances in kilometres in the Helsinki region.
+# The distance is calculated using the Pythagorean theorem. 
+# The multiplication factors below are approximate values for converting latitudes and longitudes to distances in kilometres in the Helsinki region.
 
 # # we will need the function sqrt from the math module 
 # import math
