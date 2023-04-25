@@ -466,15 +466,18 @@ def search_by_time(filename:str,prep_time:int):
     list=[]
     for recipe in recipes.items():
         if int(recipe[1][0]) < prep_time:
-            temp = prep_time - int(recipe[1][0])
-            if temp < smallest :
-                smallest = temp
-                time = recipe[1][0]
+            # temp = prep_time - int(recipe[1][0])
+            time = recipe[1][0]
             cake_name = recipe[0]
-    list.append(f'{cake_name}, preparation time {time} min')
-    print(list)
+            # if temp < smallest :
+                # smallest = temp
+            list.append(f'{cake_name}, preparation time {time} min')
     return list
 
+found_recipes = search_by_time("recipes1.txt", 35)
+
+for recipe in found_recipes:
+    print(recipe)
 
 def search_by_ingredient(filename:str,ingredient: str):
     time = ''
@@ -488,8 +491,53 @@ def search_by_ingredient(filename:str,ingredient: str):
             list.append(f'{recipe_name}, preparation time {time} min')
     return list
 
+# 7.1 City bikes
 
-found_recipes =search_by_time("recipes1.txt", 35)
+# NB: Some exercises have multiple parts, and you can receive points for the different parts separately. 
+# You can submit a partially completed exercise by choosing 'Submit Solution' from the menu next to the button for executing tests .
 
-for recipe in found_recipes:
-    print(recipe)
+# In this exercise we will write some functions for working on a file containing location data from the stations for city bikes in Helsinki.
+
+# Each file will follow this format:
+
+# Longitude;Latitude;FID;name;total_slot;operative;id
+# 24.950292890004903;60.155444793742276;1;Kaivopuisto;30;Yes;001
+# 24.956347471358754;60.160959093887129;2;Laivasillankatu;12;Yes;002
+# 24.944927399779715;60.158189199971673;3;Kapteeninpuistikko;16;Yes;003
+# Each station has a single line in the file. The line contains the coordinates, name, and other identifying information for the station.
+
+
+# Distance between stations
+# First, write a function named get_station_data(filename: str). This function should read the names and locations of all the stations in the file, and return them in a dictionary with the following format:
+
+# Sample output
+# {
+#   "Kaivopuisto: (24.950292890004903, 60.155444793742276),
+#   "Laivasillankatu: (24.956347471358754, 60.160959093887129),
+#   "Kapteeninpuistikko: (24.944927399779715, 60.158189199971673)
+# }
+# Dictionary keys are the names of the stations, and the value attached is a tuple containing the location coordinates of the station. The first element in the tuple is the Longitude field, and the second is the Latitude field.
+
+# Next, write a function named distance(stations: dict, station1: str, station2: str), which returns the distance between the two stations given as arguments.
+
+# The distance is calculated using the Pythagorean theorem. The multiplication factors below are approximate values for converting latitudes and longitudes to distances in kilometres in the Helsinki region.
+
+# # we will need the function sqrt from the math module 
+# import math
+
+# x_km = (longitude1 - longitude2) * 55.26
+# y_km = (latitude1 - latitude2) * 111.2
+# distance_km = math.sqrt(x_km**2 + y_km**2)
+# Some examples of the function in action:
+
+# stations = get_station_data('stations1.csv')
+# d = distance(stations, "Designmuseo", "Hietalahdentori")
+# print(d)
+# d = distance(stations, "Viiskulma", "Kaivopuisto")
+# print(d)
+# Sample output
+# 0.9032737292463177
+# 0.7753594392019532
+
+# NB: If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at these instructions.
+
