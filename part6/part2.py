@@ -249,8 +249,6 @@ def filter_solutions():
 
 # Paul Paulson;37;175.5
 
-
-
 student_info = input("Student information: ")
 exercise_data = input("Exercises completed: ")
 exam_point1=input("Exercises points: ")
@@ -303,6 +301,7 @@ def show_information():
     first_line = ''
     line =("{:30}{:10}{:10}{:10}{:10}{:10}\n".format(*show_data))
     list = []
+    result_list = []
     for i  in student.items():
         id = i[0]
         full_name=''
@@ -310,24 +309,24 @@ def show_information():
         award_point = sum_all_award_point(total_exercise)
         point= sum_all_point(points[id])
         total_score = award_point + point
+        new_full_name = i[1][0] + ' '+ i[1][1]
         for j in i[1]:
             full_name += j.strip() +' '
         grade = check_grade(total_score)
         list.append(f"{full_name:<30}{total_exercise:<10}{award_point:<10}{point:<10}{total_score:<10}{grade:<10}\n")
+        result_list.append(f'{id};{new_full_name.strip()};{grade}')
     show_course()
     first_line = f"{course_name['name']}, {course_name['study credits']} credits"
-    with open('./result.txt','w') as new_result : 
+    with open('./results.txt','w') as new_result : 
         new_result.write(first_line + '\n')
         new_result.write(int(len(first_line))*'=' + '\n')
         new_result.write(f'{line}')
         for i in list:
             new_result.write(f'{i}')
-    with open('./result.csv','w') as new_result_csv : 
-        new_result_csv.write(first_line + '\n')
-        new_result_csv.write(int(len(first_line))*'=' + '\n')
-        new_result_csv.write(f'{line}')
-        for i in list:
-            new_result_csv.write(f'{i}')
+    with open('./results.csv','w') as new_result_csv : 
+        for i in result_list:
+            new_result_csv.write(f'{i}\n')
+    print(result_list)
     print(f'Results written to files results.txt and results.csv')
 
 def check_grade (total_score:int):
@@ -344,3 +343,30 @@ def check_grade (total_score:int):
     if 28<= total_score:
         return 5
 show_information()
+
+
+# # 5.1 Word Search:
+
+# The exercise template includes the file words.txt, which contains words in English.
+
+# Please write a function named find_words(search_term: str). It should return a list containing all the words in the file which match the search term.
+
+# The search term may include lowercase letters and the following wildcard characters:
+
+# A dot . means that any single character is acceptable in its place. 
+# For example, ca. would yield words like cat and car, p.ng would yield words like ping and pong, and .a.e would yield words like sane, care and late.
+# An asterisk * at the end of the search term means that any word which begins with the search term is acceptable. An asterisk at the beginning of the search term means that any word which ends with the search term is acceptable. For example, ca* would yield words like california, cat, caring and catapult, while *ane would yield words like crane, insane and aeroplane. There can only ever be a single asterisk in the search term.
+# If there are no wildcard characters in the search term, only words which match the search term exactly are returned.
+# You may assume both wildcards are never used in the same search term.
+
+# The words in the file are all written in lowercase. You may also assume the argument to the function will be in lowercase entirely.
+
+# If no matching words are found, the function should return an empty list.
+
+# Hint: the Pythons string methods startswith() and endswith() may be useful here. You can search for more information about them online.
+
+# An example of the function in action:
+
+# print(find_words("*vokes"))
+# Sample output
+# ['convokes', 'equivokes', 'evokes', 'invokes', 'provokes', 'reinvokes', 'revokes']
